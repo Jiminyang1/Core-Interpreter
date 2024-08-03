@@ -1,5 +1,3 @@
-
-
 # Core Interpreter
 
 ## Overview
@@ -28,7 +26,7 @@ The Core language's grammar is defined using Backus-Naur Form (BNF) in the follo
 ![BNF Grammar](images/BNF.png)
 
 ## Example Programs
-```
+```plaintext
 procedure test is
     procedure add(a, b) is
         integer x;
@@ -49,4 +47,3 @@ procedure test is
         out(y[0]);
     end
 end
-```
