@@ -124,7 +124,7 @@ public class Assign {
 
         } else if (idId) {
             // the left should be assigened to the right
-            if(symbolTable.getVariable(id1).array != null && symbolTable.getVariable(id1).isAllocated){
+            if(symbolTable.getVariable(id1).array != null && symbolTable.getVariable(id1).isAllocated()){
                 symbolTable.getVariable(id1).decrementReferenceCount();
                 //System.out.println("reference count of " + id1 + " is " + symbolTable.getVariable(id1).referenceCount);
             }
@@ -132,7 +132,7 @@ public class Assign {
             symbolTable.getVariable(id1).array = symbolTable.getVariable(id2).array;
 
             
-            if(symbolTable.getVariable(id2).array != null && symbolTable.getVariable(id2).isAllocated){
+            if(symbolTable.getVariable(id2).array != null && symbolTable.getVariable(id2).isAllocated()){
                 symbolTable.getVariable(id2).incrementReferenceCount();
             }
         }
